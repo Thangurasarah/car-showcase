@@ -15,9 +15,9 @@ flex justify-between items-center sm:px-16 px-6 py-4">
     height={18}
     className="object-contain"
     />
-    </Link>
+    </Link> 
     <CustomButton 
-    text="Sign In"
+    title="Sign In"
     btnType="button"
     containerStyles="text-primary-blue
     rounded-full bg-white min-w-[130px]"
