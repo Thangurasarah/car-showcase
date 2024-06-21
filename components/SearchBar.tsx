@@ -1,4 +1,4 @@
-"use Client";
+"use client";
 
 import { useState } from 'react'
 import SearchManufacturer from './SearchManufacturer'
@@ -23,4 +23,4 @@ useState('');
   )
 }
 
-export default SearchBar
+export default SearchBar;
