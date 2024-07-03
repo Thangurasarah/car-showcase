@@ -8,7 +8,7 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CustomFilterProps } from "../types"; 
 import { updateSearchParams } from "../utils";
 
-export default function CustomFilter({ title, options }: CustomFilterProps) {
+export default function CustomFilter({ title, options, setFilter }: CustomFilterProps) {
   const router = useRouter();
   const [selected, setSelected] = useState(options[0]); // State for storing the selected option
 
@@ -24,8 +24,8 @@ export default function CustomFilter({ title, options }: CustomFilterProps) {
       <Listbox
         value={selected}
         onChange={(e) => {
-          setSelected(e); // Update the selected option in state
-          handleUpdateParams(e); // Update the URL search parameters and navigate to the new URL
+          setSelected(e); 
+          setFilter(e.value); 
         }}
       >
         <div className='relative w-fit z-10'>
